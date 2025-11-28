@@ -18,14 +18,20 @@ console.log("Rock --> Scissors");
 // Accept & validate User's Choice
 function getUserInput() {
   choices = ["rock", "paper", "scissors", "lizard", "spock"];
-  let userChoice = prompt("Choose your fighter:");
-  if (choices.includes(userChoice.toLowerCase())) {
+try {
+    let userChoice = prompt("Choose your fighter: ").toLowerCase();
+
+    if (!choices.includes(userChoice)) {
+      throw new Error("Invalid choice! Try again.\n");
+    }
+
     console.log("You have chosen " + userChoice.toUpperCase());
-  } else {
-    console.log("Your choice was not one of the allowed options, try again.");
-    userInput();
+    return userChoice;
+
+  } catch (error) {
+    console.log(error.message);
+    return getUserInput(); // Retry input safely
   }
-  return userChoice;
 }
 let userInput = getUserInput();
 
