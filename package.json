@@ -1,0 +1,23 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "Welcome to our repository! Here you will find a selection of minigames created during our first hackathon.",
+  "homepage": "https://github.com/sjw-99/Sam-and-Clarence-Hackathon-1#readme",
+  "bugs": {
+    "url": "https://github.com/sjw-99/Sam-and-Clarence-Hackathon-1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjw-99/Sam-and-Clarence-Hackathon-1.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "RPSLS.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
