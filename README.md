@@ -5,7 +5,8 @@ Welcome to our repository! Here you will find a selection of minigames created d
 ## Getting Started
 
 1. Clone our repository to your machine by fetching the SSH address and using <br> `git clone <SSH Address>`
-2. Enjoy one of our games from the comfort of your terminal using <br> `node <Name of Game>`
+2. Install the required packages for our scripts using <br> `npm install`
+3. Enjoy one of our games from the comfort of your terminal using <br> `node <Name of Game>`
 
 ## Game 1 - Rock, Paper, Scissors, Lizard, Spock
 
