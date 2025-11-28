@@ -1,3 +1,5 @@
+const cardContainer = document.querySelector("#cardContainer");
+
 // Import Prompt Function
 const prompt = require("prompt-sync")();
 
@@ -127,4 +129,43 @@ while (keepPlaying) {
     }
   }
   getKeepPlaying();
+  addGameCard(userInput, computerChoice);
+}
+
+function addGameCard(userInput, computerChoice) {
+  // Creates Elements
+  const gameCard = document.createElement("div");
+  const imageContainer = document.createElement("div");
+  const imageUser = document.createElement("img");
+  const imageComputer = document.createElement("img");
+  const cardBody = document.createElement("div");
+  const userText = document.createElement("p");
+  const computerText = document.createElement("p");
+  const resultText = document.createElement("p");
+
+  // Assigns correct classes from CSS
+  gameCard.className = "card";
+  imageContainer.className = "imageBox";
+  cardBody.className = "card-body";
+  userText.className = "card-text";
+  computerText.className = "card-text";
+  resultText.className = "card-text-bold";
+
+  //Add text to card body
+  userText.textContent = "The user picked " + userInput;
+  computerText.textContent = "The computer picked " + computerChoice;
+
+  // Adds game card to page container
+  cardContainer.appendChild(gameCard);
+
+  // Adds image container and fills it with images
+  gameCard.appendChild(imageContainer);
+  imageContainer.appendChild(imageUser);
+  imageContainer.appendChild(imageComputer);
+
+  //Adds card body and fills it with game details.
+  gameCard.appendChild(cardBody);
+  cardBody.appendChild(userText);
+  cardBody.appendChild(computerText);
+  cardBody.appendChild(resultText);
 }
