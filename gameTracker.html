@@ -10,6 +10,7 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="styles.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -19,13 +20,46 @@
   </head>
 
   <body>
-    <div class="card" style="width: 18rem">
-      <img src="..." class="card-img-top" alt="..." />
-      <div class="card-body">
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card’s content.
-        </p>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand">
+          <img
+            src="Assets/Navbar Logo.png"
+            alt="Logo"
+            width="128"
+            height="72"
+            class="d-inline-block align-text-top"
+          />
+          Game Tracker - Rock Paper Scissors Lizard Spock
+        </a>
+      </div>
+    </nav>
+
+    <br />
+    <center>
+      Here you can keep track of the games of RPSLS you have played so far
+    </center>
+    <br />
+
+    <div class="pageContainer" id="cardContainer">
+      <div class="card" style="width: 18rem">
+        <div class="imageBox">
+          <img
+            src="Assets/Lizard.avif"
+            class="card-img-top"
+            alt="A picture of a lizard"
+          />
+          <img
+            src="Assets/Spock.webp"
+            class="card-img-top"
+            alt="A picture of a lizard"
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-text">The user picked Lizard.</p>
+          <p class="card-text">The computer picked Spock.</p>
+          <p class="card-text-bold">Winner: User</p>
+        </div>
       </div>
     </div>
   </body>
