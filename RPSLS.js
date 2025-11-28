@@ -16,7 +16,7 @@ console.log("Spock --> Rock");
 console.log("Rock --> Scissors");
 
 // Accept & validate User's Choice
-function userInput() {
+function getUserInput() {
   choices = ["rock", "paper", "scissors", "lizard", "spock"];
   let userChoice = prompt("Choose your fighter:");
   if (choices.includes(userChoice.toLowerCase())) {
@@ -27,13 +27,77 @@ function userInput() {
   }
   return userChoice;
 }
-userInput();
+let userInput = getUserInput();
 
 // Generate Computer's Choice
 function getComputerChoice() {
   choices = ["rock", "paper", "scissors", "lizard", "spock"];
   randomInt = Math.floor(Math.random() * 5);
-  computerChoice = choices[randomInt];
-  return computerChoice;
+  choice = choices[randomInt];
+  return choice;
 }
+let computerChoice = getComputerChoice();
 console.log("The Computer chose " + getComputerChoice().toUpperCase());
+
+// Work out who wins & display appropriate message.
+function getWinner(userChoice, computerChoice) {
+  if (
+    userChoice.toLowerCase() === "rock" &&
+    (computerChoice === "lizard" || computerChoice === "scissors")
+  ) {
+    console.log(
+      userChoice.toUpperCase() +
+        " beats " +
+        computerChoice.toUpperCase() +
+        ", YOU WIN!"
+    );
+  } else if (
+    userChoice.toLowerCase() === "paper" &&
+    (computerChoice === "rock" || computerChoice === "spock")
+  ) {
+    console.log(
+      userChoice.toUpperCase() +
+        " beats " +
+        computerChoice.toUpperCase() +
+        ", YOU WIN!"
+    );
+  } else if (
+    userChoice.toLowerCase() === "scissors" &&
+    (computerChoice === "paper" || computerChoice === "lizard")
+  ) {
+    console.log(
+      userChoice.toUpperCase() +
+        " beats " +
+        computerChoice.toUpperCase() +
+        ", YOU WIN!"
+    );
+  } else if (
+    userChoice.toLowerCase() === "lizard" &&
+    (computerChoice === "spock" || computerChoice === "paper")
+  ) {
+    console.log(
+      userChoice.toUpperCase() +
+        " beats " +
+        computerChoice.toUpperCase() +
+        ", YOU WIN!"
+    );
+  } else if (
+    userChoice.toLowerCase() === "spock" &&
+    (computerChoice === "scissors" || computerChoice === "rock")
+  ) {
+    console.log(
+      userChoice.toUpperCase() +
+        " beats " +
+        computerChoice.toUpperCase() +
+        ", YOU WIN!"
+    );
+  } else {
+    console.log(
+      computerChoice.toUpperCase() +
+        " beats " +
+        userChoice.toUpperCase() +
+        ", YOU LOSE!"
+    );
+  }
+}
+getWinner(userInput, computerChoice);
