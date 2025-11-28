@@ -37,7 +37,7 @@ function getComputerChoice() {
   return choice;
 }
 let computerChoice = getComputerChoice();
-console.log("The Computer chose " + getComputerChoice().toUpperCase());
+console.log("The Computer chose " + computerChoice.toUpperCase());
 
 // Work out who wins & display appropriate message.
 function getWinner(userChoice, computerChoice) {
@@ -91,6 +91,8 @@ function getWinner(userChoice, computerChoice) {
         computerChoice.toUpperCase() +
         ", YOU WIN!"
     );
+  } else if (computerChoice.toLowerCase() === userChoice.toLowerCase()) {
+    console.log("It's a DRAW!");
   } else {
     console.log(
       computerChoice.toUpperCase() +
