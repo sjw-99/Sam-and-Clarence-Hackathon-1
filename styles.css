@@ -1,0 +1,29 @@
+.pageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body {
+    background-image: linear-gradient(
+    to right,
+    #9EC5AB,
+    #0697b827
+  );
+}
+
+.card-text-bold {
+    font-weight: bold;   
+}
+
+.imageBox {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
