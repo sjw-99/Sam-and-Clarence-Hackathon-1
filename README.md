@@ -6,7 +6,7 @@ Welcome to our repository! Here you will find our spin on the classic game Rock,
 
 1. Clone our repository to your machine by fetching the SSH address and using <br> `git clone <SSH Address>`
 2. Install the required packages for our scripts using <br> `npm install`
-3. Enjoy our games from the comfort of your terminal, and load our Game Tracking webpage (_in development_) using <br> `npm start`
+3. Enjoy our game from the comfort of your terminal using <br> `npm start`
 
 ## Our Game - Rock, Paper, Scissors, Lizard, Spock (RPSLS)
 
@@ -23,4 +23,4 @@ We hope you enjoy! **GLHF**!
 
 We are currently working on a new feature that tracks the games a user has played, removing the need to scroll through the text in the console you are playing in. The desired result will look something like this mockup: <br>
 ![Mockup of Game-Tracking Webpage](/Assets/Webpage-Mock.png) <br>
-We're hoping to have this page up and running as soon as possible!
+To achieve this, we aim to take the entire game into the browser, which will be loaded instead of your terminal when you play the game. the inputs and outputs will be exactly the same, but you'll be able to show off your winning streaks with ease!

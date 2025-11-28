@@ -16,7 +16,7 @@
   "main": "RPSLS.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "open gameTracker.html && node RPSLS.js"
+    "start": "node RPSLS.js"
   },
   "dependencies": {
     "live-server": "^1.2.2",
